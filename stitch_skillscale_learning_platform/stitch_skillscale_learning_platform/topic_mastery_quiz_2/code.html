@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Topic Mastery Quiz - Kalvi Supernova</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#faf8ff",
+                        "on-tertiary-container": "#000703",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-tint": "#494bd6",
+                        "surface-container-high": "#e2e7ff",
+                        "on-primary-fixed": "#07006c",
+                        "secondary-container": "#dc2c4f",
+                        "surface-container": "#eaedff",
+                        "surface-container-low": "#f2f3ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#6ffbbe",
+                        "inverse-primary": "#c0c1ff",
+                        "on-secondary-fixed-variant": "#92002a",
+                        "secondary-fixed-dim": "#ffb2b7",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-bright": "#faf8ff",
+                        "on-background": "#131b2e",
+                        "tertiary-container": "#00885d",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdadb",
+                        "on-tertiary-fixed": "#002113",
+                        "outline-variant": "#c7c4d7",
+                        "secondary": "#b90538",
+                        "inverse-on-surface": "#eef0ff",
+                        "background": "#faf8ff",
+                        "on-surface-variant": "#464554",
+                        "outline": "#767586",
+                        "primary": "#4648d4",
+                        "surface-dim": "#d2d9f4",
+                        "on-secondary-fixed": "#40000d",
+                        "inverse-surface": "#283044",
+                        "primary-container": "#6063ee",
+                        "on-surface": "#131b2e",
+                        "surface-container-highest": "#dae2fd",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#006c49",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-error-container": "#93000a"
+                    },
+                    "spacing": {
+                        "max-width": "1280px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "sm": "8px",
+                        "xl": "48px",
+                        "margin": "32px",
+                        "xs": "4px",
+                        "base": "4px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Lato"],
+                        "headline-md": ["Lato"],
+                        "body-md": ["Lato"],
+                        "headline-xl": ["Lato"],
+                        "body-lg": ["Lato"],
+                        "label-md": ["Lato"],
+                        "label-sm": ["Lato"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-layer-elevation {
+            box-shadow: 0 -4px 24px rgba(99, 102, 241, 0.1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+        .supernova-gradient {
+            background: linear-gradient(135deg, #4648d4 0%, #6063ee 100%);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-primary-container selection:text-white">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 shadow-[0_4px_20px_rgba(99,102,241,0.08)]">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Student Profile Image" class="w-full h-full object-cover" data-alt="Portrait of a diverse young student smiling, high resolution professional photography with soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMpRrROfmMnxioVvlNcWrgz7s9Hd2Au_x6TT5wDbIRSb1H4e_woSjXsIz5C6prnZ6jCw9-sbThc-emuA_Sh_LbPXOcsccNYQQPoxPWTWb8BmBF1kueNFzaa62_x2i4ypdCwjcUoJr1Cv0VwP-vcphqGDrhXiMsvih0Xo4GtX1L8iqA8KAD63kj6qYr1bqWff9NSGByuXdJgaS_Q-Tz1qpuqx3HMec58jExTTco4ZHR09BJba9iK10ERf0rnmQSeaCVrNFeE9YAraw"/>
+</div>
+<h1 class="text-xl font-black tracking-tight text-indigo-600 dark:text-indigo-400 font-['Lato']">Kalvi Supernova</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-slate-500 hover:bg-indigo-50 p-2 rounded-full transition-colors active:scale-95" data-icon="notifications">notifications</button>
+<button class="material-symbols-outlined text-slate-500 hover:bg-indigo-50 p-2 rounded-full transition-colors active:scale-95" data-icon="close">close</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="pt-24 pb-32 px-4 max-w-3xl mx-auto min-h-screen">
+<!-- Quiz Progress Header -->
+<div class="mb-8 space-y-4">
+<div class="flex justify-between items-end">
+<div>
+<span class="font-label-md text-primary bg-primary-fixed px-3 py-1 rounded-full uppercase tracking-wider">Physics • Quantum Basics</span>
+<h2 class="font-headline-md mt-2">Topic Mastery Quiz</h2>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-primary">07</span>
+<span class="font-label-md text-outline">/ 15</span>
+</div>
+</div>
+<!-- Custom Progress Orb & Bar -->
+<div class="relative h-3 w-full bg-surface-container rounded-full overflow-hidden">
+<div class="absolute top-0 left-0 h-full supernova-gradient shadow-[0_0_12px_rgba(99,102,241,0.4)] transition-all duration-500" style="width: 46%;"></div>
+</div>
+</div>
+<!-- Question Section -->
+<section class="space-y-6">
+<div class="glass-card rounded-3xl p-8 shadow-sm">
+<h3 class="font-headline-md text-on-surface leading-tight">
+                    According to the Heisenberg Uncertainty Principle, what is the fundamental limit to what we can know about a particle?
+                </h3>
+<div class="mt-8 space-y-4">
+<!-- Option A -->
+<button class="w-full text-left p-5 rounded-2xl border-2 border-outline-variant bg-white hover:border-primary-container hover:bg-primary-fixed/30 transition-all group flex items-center gap-4 active:scale-[0.98]">
+<span class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container text-primary font-bold group-hover:bg-primary group-hover:text-white transition-colors">A</span>
+<span class="font-body-lg">The exact mass and volume of a particle at any given moment.</span>
+</button>
+<!-- Option B (Selected/Active State Example) -->
+<button class="w-full text-left p-5 rounded-2xl border-2 border-primary supernova-gradient text-white transition-all flex items-center gap-4 shadow-lg active:scale-[0.98]">
+<span class="w-10 h-10 flex items-center justify-center rounded-xl bg-white/20 text-white font-bold">B</span>
+<span class="font-body-lg">The simultaneous position and momentum of a particle.</span>
+<span class="material-symbols-outlined ml-auto" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+<!-- Option C -->
+<button class="w-full text-left p-5 rounded-2xl border-2 border-outline-variant bg-white hover:border-primary-container hover:bg-primary-fixed/30 transition-all group flex items-center gap-4 active:scale-[0.98]">
+<span class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container text-primary font-bold group-hover:bg-primary group-hover:text-white transition-colors">C</span>
+<span class="font-body-lg">The speed of light relative to the particle's observer.</span>
+</button>
+<!-- Option D -->
+<button class="w-full text-left p-5 rounded-2xl border-2 border-outline-variant bg-white hover:border-primary-container hover:bg-primary-fixed/30 transition-all group flex items-center gap-4 active:scale-[0.98]">
+<span class="w-10 h-10 flex items-center justify-center rounded-xl bg-surface-container text-primary font-bold group-hover:bg-primary group-hover:text-white transition-colors">D</span>
+<span class="font-body-lg">The precise time a particle will undergo radioactive decay.</span>
+</button>
+</div>
+</div>
+<!-- AI Tutor Easy Understand Tip -->
+<div class="relative overflow-hidden rounded-3xl bg-tertiary-container p-1 shadow-lg">
+<div class="bg-surface-container-lowest rounded-[20px] p-6">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-tertiary/10 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="smart_toy" style="font-variation-settings: 'FILL' 1;">smart_toy</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<h4 class="font-label-md text-tertiary flex items-center gap-2">
+                                    AI TUTOR TIP • EASY UNDERSTAND
+                                </h4>
+<span class="bg-emerald-100 text-emerald-700 text-[10px] px-2 py-0.5 rounded-full font-bold">SMART HELP</span>
+</div>
+<p class="font-body-md text-on-surface-variant leading-relaxed">
+                                Imagine trying to take a photo of a moving car. If you use a fast shutter, you see the <span class="text-tertiary font-bold">position</span> clearly but not the speed. If you use a slow shutter, you see the <span class="text-tertiary font-bold">momentum (blur)</span> but not the exact position. You can't have both perfectly!
+                            </p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-slate-100 flex justify-end gap-3">
+<button class="text-outline hover:text-primary transition-colors flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-lg" data-icon="thumb_up">thumb_up</span> Helpful
+                        </button>
+<button class="text-outline hover:text-secondary transition-colors flex items-center gap-1 font-label-sm">
+<span class="material-symbols-outlined text-lg" data-icon="lightbulb">lightbulb</span> Deep Dive
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Action Bar -->
+<div class="mt-12 flex items-center justify-between gap-4">
+<button class="px-8 py-4 rounded-2xl border-2 border-primary text-primary font-label-md hover:bg-primary-fixed transition-all active:scale-95">
+                SAVE FOR LATER
+            </button>
+<button class="px-10 py-4 rounded-2xl supernova-gradient text-white font-label-md shadow-xl hover:shadow-indigo-200/50 transition-all active:scale-95 flex items-center gap-2">
+                NEXT QUESTION
+                <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Decorative Element -->
+<div class="mt-20 flex justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant mx-1"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant mx-1"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-outline-variant mx-1"></div>
+</div>
+</main>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200/50 dark:border-slate-800/50 shadow-[0_-4px_24px_rgba(99,102,241,0.1)] z-50">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard">dashboard</span>
+<span class="font-['Lato'] text-[10px] font-medium">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-['Lato'] text-[10px] font-medium">Curriculum</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="smart_toy">smart_toy</span>
+<span class="font-['Lato'] text-[10px] font-medium">AI Tutor</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-200 rounded-2xl px-4 py-1.5 transition-all active:scale-90" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="quiz" style="font-variation-settings: 'FILL' 1;">quiz</span>
+<span class="font-['Lato'] text-[10px] font-medium">Tests</span>
+</a>
+</nav>
+<!-- Background Decoration -->
+<div class="fixed top-[-10%] right-[-10%] w-[40%] h-[40%] bg-primary/5 blur-[120px] rounded-full -z-10"></div>
+<div class="fixed bottom-[-5%] left-[-5%] w-[30%] h-[30%] bg-tertiary/5 blur-[100px] rounded-full -z-10"></div>
+</body></html>

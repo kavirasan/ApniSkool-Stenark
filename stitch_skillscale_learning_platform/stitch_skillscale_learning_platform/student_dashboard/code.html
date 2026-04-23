@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#faf8ff",
+                        "on-tertiary-container": "#000703",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-tint": "#494bd6",
+                        "surface-container-high": "#e2e7ff",
+                        "on-primary-fixed": "#07006c",
+                        "secondary-container": "#dc2c4f",
+                        "surface-container": "#eaedff",
+                        "surface-container-low": "#f2f3ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#6ffbbe",
+                        "inverse-primary": "#c0c1ff",
+                        "on-secondary-fixed-variant": "#92002a",
+                        "secondary-fixed-dim": "#ffb2b7",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-bright": "#faf8ff",
+                        "on-background": "#131b2e",
+                        "tertiary-container": "#00885d",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdadb",
+                        "on-tertiary-fixed": "#002113",
+                        "outline-variant": "#c7c4d7",
+                        "secondary": "#b90538",
+                        "inverse-on-surface": "#eef0ff",
+                        "background": "#faf8ff",
+                        "on-surface-variant": "#464554",
+                        "outline": "#767586",
+                        "primary": "#4648d4",
+                        "surface-dim": "#d2d9f4",
+                        "on-secondary-fixed": "#40000d",
+                        "inverse-surface": "#283044",
+                        "primary-container": "#6063ee",
+                        "on-surface": "#131b2e",
+                        "surface-container-highest": "#dae2fd",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#006c49",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-error-container": "#93000a"
+                    },
+                    "spacing": {
+                        "max-width": "1280px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "sm": "8px",
+                        "xl": "48px",
+                        "margin": "32px",
+                        "xs": "4px",
+                        "base": "4px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Lato"],
+                        "headline-md": ["Lato"],
+                        "body-md": ["Lato"],
+                        "headline-xl": ["Lato"],
+                        "body-lg": ["Lato"],
+                        "label-md": ["Lato"],
+                        "label-sm": ["Lato"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .tonal-layer-elevation {
+            box-shadow: 0 -4px 24px rgba(99, 102, 241, 0.1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body-md min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 shadow-[0_4px_20px_rgba(99,102,241,0.08)]">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-container ring-2 ring-primary/20">
+<img alt="Student Profile Image" class="w-full h-full object-cover" data-alt="close-up portrait of a young male student with a friendly expression and modern spectacles in a bright airy studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgPt1Dz2-oZFWz_l27Bcz48NojG_gSZndkzLEM8yIQaE371v-_AMcZ_qLjzZYmo18polSzs0HTWDb0WhuLevshBILQrHCZ_aj_qkWOPxylvvvMyWcD2oJ2QQvQfY0f0KSqSNhOc1r1BLUN1mi7g_NS63pIQjo2dBW7p4jtnylPfdwC_LyHvzXoTbH-WK7HwDaKE1eSxEivOoMXoujqu-dld3W77Px3wReD6vGlirbqyNdR1sOBPC4Xmap97YaUcK8WJtzzVu32_Yg"/>
+</div>
+<h1 class="text-xl font-black tracking-tight text-indigo-600 dark:text-indigo-400 font-['Lato']">Kalvi Supernova</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors active:scale-95 duration-200 text-slate-500">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-4 pt-24 pb-12">
+<!-- Hero Welcome -->
+<section class="mb-lg">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-xs">Hello, Arjun!</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Your supernova journey is 68% complete today.</p>
+</section>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Physics Progress Card -->
+<div class="md:col-span-8 glass-card rounded-[16px] p-lg shadow-[0_4px_20px_rgba(99,102,241,0.08)] relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[120px]" data-icon="rocket_launch">rocket_launch</span>
+</div>
+<div class="relative z-10">
+<div class="flex justify-between items-start mb-xl">
+<div>
+<span class="font-label-md text-label-md text-primary bg-primary-container/10 px-3 py-1 rounded-full mb-sm inline-block">CURRENT FOCUS</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Physics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Quantum Mechanics: Wave-Particle Duality</p>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-primary">74%</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Course Progress</p>
+</div>
+</div>
+<div class="w-full bg-surface-container rounded-full h-4 mb-md">
+<div class="bg-gradient-to-r from-primary to-primary-container h-4 rounded-full shadow-[0_0_12px_rgba(70,72,212,0.4)]" style="width: 74%"></div>
+</div>
+<div class="flex justify-between items-center">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="menu_book">menu_book</span>
+</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-sm" data-icon="play_circle">play_circle</span>
+</div>
+</div>
+<button class="bg-primary text-on-primary font-label-md text-label-md px-md py-sm rounded-xl shadow-lg hover:shadow-xl active:scale-95 transition-all">
+                            RESUME LESSON
+                        </button>
+</div>
+</div>
+</div>
+<!-- Streak Card -->
+<div class="md:col-span-4 bg-gradient-to-br from-secondary to-secondary-container rounded-[16px] p-lg text-on-secondary shadow-lg flex flex-col justify-between">
+<div class="flex justify-between items-start">
+<div class="w-12 h-12 bg-white/20 backdrop-blur-md rounded-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl" data-icon="local_fire_department" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<span class="font-label-md text-label-md bg-white/20 px-3 py-1 rounded-full">ELITE TIER</span>
+</div>
+<div>
+<h3 class="font-headline-xl text-headline-xl leading-none">14 Day Streak</h3>
+<p class="font-body-md text-body-md opacity-90 mt-sm">You're in the top 5% of students this week!</p>
+</div>
+</div>
+<!-- Weekly Focus -->
+<div class="md:col-span-4 glass-card rounded-[16px] p-lg shadow-[0_4px_20px_rgba(99,102,241,0.08)]">
+<div class="flex items-center gap-2 mb-md">
+<span class="material-symbols-outlined text-tertiary" data-icon="target">target</span>
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase">Weekly Focus</h3>
+</div>
+<div class="space-y-md">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-tertiary" data-icon="check_circle">check_circle</span>
+</div>
+<div>
+<p class="font-body-md font-bold">Calculus Mastery</p>
+<p class="font-label-sm text-on-surface-variant">3/4 Lessons completed</p>
+</div>
+</div>
+<div class="flex items-center gap-3 opacity-60">
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center border-2 border-dashed border-outline">
+<span class="material-symbols-outlined text-outline" data-icon="radio_button_unchecked">radio_button_unchecked</span>
+</div>
+<div>
+<p class="font-body-md font-bold">Organic Chemistry Lab</p>
+<p class="font-label-sm text-on-surface-variant">Scheduled for Friday</p>
+</div>
+</div>
+</div>
+</div>
+<!-- AI Recommended Quiz -->
+<div class="md:col-span-8 glass-card rounded-[16px] overflow-hidden shadow-[0_4px_20px_rgba(99,102,241,0.08)] flex flex-col md:flex-row">
+<div class="md:w-1/3 h-48 md:h-auto bg-primary-container relative">
+<img alt="AI Quiz" class="w-full h-full object-cover mix-blend-overlay" data-alt="abstract digital visualization of particles and light rays representing quantum physics in a clean futuristic style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5RTl2tEP5wZoIuMdCMg-5_qvP3l81WmPVXG0qlj9nRBOXcg_GXFBMtYTbbVTf_YFKMJJV9pT-nsWHnD3uKw00zfttDH70VrCmrgRGNax_13ieiCfpq4gmf_VuGmw7WRTbObo3kFrm4rjNFxd_Dho2e6eUbu-UmQmQT5g-VhphmWhVnWAPj4awLZvY4IWMypeG1MFiXu2HYxZjEs6oE4qcWQNjwm17DpFE_smz2Zt9mSDSCyX81QEOwPzJ0UzfuTSaYKIlS0idokk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-md">
+<span class="bg-white text-primary font-label-md text-label-sm px-3 py-1 rounded-full">AI RECOMMENDED</span>
+</div>
+</div>
+<div class="p-lg md:w-2/3 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-2 mb-xs text-indigo-500">
+<span class="material-symbols-outlined text-sm" data-icon="smart_toy">smart_toy</span>
+<span class="font-label-sm text-label-sm">Supernova AI Insight</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-sm">Waves &amp; Optics Challenge</h3>
+<p class="font-body-md text-on-surface-variant mb-md">Based on your recent Physics performance, this quiz will help solidify your understanding of diffraction patterns.</p>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex gap-4">
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-base" data-icon="schedule">schedule</span>
+<span class="font-label-sm">15 Mins</span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-base" data-icon="quiz">quiz</span>
+<span class="font-label-sm">10 Qs</span>
+</div>
+</div>
+<button class="border-2 border-primary text-primary font-label-md text-label-md px-md py-sm rounded-xl hover:bg-primary hover:text-on-primary transition-all">
+                            START QUIZ
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-3xl border-t border-slate-200/50 dark:border-slate-800/50 tonal-layer-elevation">
+<div class="flex justify-around items-center px-4 pb-6 pt-3 max-w-7xl mx-auto">
+<!-- Active: Dashboard -->
+<a class="flex flex-col items-center justify-center bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-200 rounded-2xl px-4 py-1.5 active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-['Lato'] text-[10px] font-medium">Dashboard</span>
+</a>
+<!-- Inactive: Curriculum -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Lato'] text-[10px] font-medium">Curriculum</span>
+</a>
+<!-- Inactive: AI Tutor -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-['Lato'] text-[10px] font-medium">AI Tutor</span>
+</a>
+<!-- Inactive: Tests -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 active:scale-90 transition-all duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span class="font-['Lato'] text-[10px] font-medium">Tests</span>
+</a>
+</div>
+</nav>
+<!-- FAB (Suppressed on main dashboard as per rules, but shown here for UI completeness as a 'Study Now' shortcut only if highly relevant. In this case, we follow strict suppression as per mandate for Profile/Dashboard if not explicitly requested, but the design system mentions context. We will stick to the mandate.) -->
+</body></html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#faf8ff",
+                        "on-tertiary-container": "#000703",
+                        "on-primary-fixed-variant": "#2f2ebe",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#dae2fd",
+                        "on-tertiary-fixed-variant": "#005236",
+                        "surface-tint": "#494bd6",
+                        "surface-container-high": "#e2e7ff",
+                        "on-primary-fixed": "#07006c",
+                        "secondary-container": "#dc2c4f",
+                        "surface-container": "#eaedff",
+                        "surface-container-low": "#f2f3ff",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#6ffbbe",
+                        "inverse-primary": "#c0c1ff",
+                        "on-secondary-fixed-variant": "#92002a",
+                        "secondary-fixed-dim": "#ffb2b7",
+                        "primary-fixed": "#e1e0ff",
+                        "surface-bright": "#faf8ff",
+                        "on-background": "#131b2e",
+                        "tertiary-container": "#00885d",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-container": "#fffbff",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffdadb",
+                        "on-tertiary-fixed": "#002113",
+                        "outline-variant": "#c7c4d7",
+                        "secondary": "#b90538",
+                        "inverse-on-surface": "#eef0ff",
+                        "background": "#faf8ff",
+                        "on-surface-variant": "#464554",
+                        "outline": "#767586",
+                        "primary": "#4648d4",
+                        "surface-dim": "#d2d9f4",
+                        "on-secondary-fixed": "#40000d",
+                        "inverse-surface": "#283044",
+                        "primary-container": "#6063ee",
+                        "on-surface": "#131b2e",
+                        "surface-container-highest": "#dae2fd",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#c0c1ff",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#006c49",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#4edea3",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "max-width": "1280px",
+                        "lg": "24px",
+                        "gutter": "24px",
+                        "sm": "8px",
+                        "xl": "48px",
+                        "margin": "32px",
+                        "xs": "4px",
+                        "base": "4px",
+                        "md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Lato"],
+                        "headline-md": ["Lato"],
+                        "body-md": ["Lato"],
+                        "headline-xl": ["Lato"],
+                        "body-lg": ["Lato"],
+                        "label-md": ["Lato"],
+                        "label-sm": ["Lato"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.25", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "headline-xl": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "700"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "600"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .tonal-layer-elevation {
+            box-shadow: 0 -4px 24px rgba(99, 102, 241, 0.1);
+        }
+        .supernova-gradient {
+            background: linear-gradient(135deg, #4648d4 0%, #6063ee 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen">
+<!-- TopAppBar Shell -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-b border-slate-200/50 dark:border-slate-800/50 shadow-[0_4px_20px_rgba(99,102,241,0.08)]">
+<div class="flex justify-between items-center w-full px-4 h-16 max-w-7xl mx-auto">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img alt="Student Profile Image" class="w-full h-full object-cover" data-alt="Close up portrait of a young student smiling in a modern educational setting with warm natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMb7dNkamAglAIPv7uF48bahVnR3lJuRAuRzSzUlzu9X6tWn2mVaIqN16EFDjaIpg_G7KmOfcflTYtyVBpaBXZ5IY4tGq-MZBRkDjp9v_PVZTEu9K8BU9lqPh15p7XcxXvXggoPAUv1HOXzcTPOCs9vtUBdVqYQr9lZ8d9FJXu5yltheiDqSN0psB3Fvz-Q_mLz367e3XNg9_6iUA-c11FWcfTD-hAtKbBEO01icSl0XwXedZsdAj2zD0cMcTkhchpfIjEVt0sZIQ"/>
+</div>
+<h1 class="text-xl font-black tracking-tight text-indigo-600 dark:text-indigo-400 font-headline-md">Kalvi Supernova</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-xl hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition-colors active:scale-95 duration-200">
+<span class="material-symbols-outlined text-indigo-600 dark:text-indigo-400" data-icon="notifications">notifications</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="pt-24 pb-32 px-4 max-w-7xl mx-auto">
+<!-- Welcome Hero -->
+<section class="mb-xl">
+<div class="flex flex-col md:flex-row justify-between items-end gap-6 mb-lg">
+<div class="space-y-2">
+<span class="font-label-md text-primary tracking-widest uppercase">Academic Year 2024-25</span>
+<h2 class="font-headline-xl text-on-surface">Curriculum Directory</h2>
+<p class="font-body-lg text-on-surface-variant max-w-2xl">Fuel your academic journey with the Grade 11 Supernova curriculum. Explore your subjects and track your mastery across the cosmos of knowledge.</p>
+</div>
+<div class="hidden md:flex bg-primary-fixed text-on-primary-fixed px-6 py-3 rounded-2xl items-center gap-3">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+<span class="font-label-md">Grade 11 Science Stream</span>
+</div>
+</div>
+</section>
+<!-- Subject Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Mathematics Expanded (Priority Card) -->
+<div class="md:col-span-8 space-y-gutter">
+<div class="glass-card rounded-[32px] p-8 shadow-[0_8px_32px_rgba(99,102,241,0.06)] relative overflow-hidden">
+<!-- Background Accent -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/5 rounded-full -mr-20 -mt-20 blur-3xl"></div>
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-xl relative z-10">
+<div class="flex items-center gap-5">
+<div class="w-16 h-16 rounded-2xl supernova-gradient flex items-center justify-center text-white shadow-lg shadow-indigo-200">
+<span class="material-symbols-outlined text-4xl" data-icon="calculate">calculate</span>
+</div>
+<div>
+<h3 class="font-headline-lg text-on-surface">Mathematics</h3>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-tertiary">45% Course Mastery</span>
+<div class="w-24 h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="w-[45%] h-full bg-tertiary"></div>
+</div>
+</div>
+</div>
+</div>
+<button class="px-6 py-3 border-2 border-primary text-primary rounded-xl font-label-md hover:bg-primary/5 transition-all active:scale-95">Resume Learning</button>
+</div>
+<!-- Learning Path Section -->
+<div class="relative z-10">
+<h4 class="font-label-md text-on-surface-variant mb-md border-b border-slate-100 pb-2">LEARNING PATH</h4>
+<div class="space-y-6">
+<!-- Completed Module -->
+<div class="flex items-start gap-6 group">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-xl" data-icon="check" data-weight="fill" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div class="w-0.5 h-16 bg-tertiary-fixed-dim/40 mt-1"></div>
+</div>
+<div class="flex-1 bg-surface-container-lowest p-5 rounded-2xl border border-slate-100 shadow-sm transition-all hover:shadow-md">
+<div class="flex justify-between items-start mb-2">
+<h5 class="font-headline-md text-on-surface">Matrices and Determinants</h5>
+<span class="px-3 py-1 bg-tertiary/10 text-tertiary rounded-full font-label-sm">Completed</span>
+</div>
+<p class="font-body-md text-on-surface-variant">Operations on matrices, properties of determinants, and applications in linear systems.</p>
+</div>
+</div>
+<!-- In Progress Module -->
+<div class="flex items-start gap-6 group">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-lg shadow-indigo-200 animate-pulse">
+<span class="material-symbols-outlined text-xl" data-icon="play_arrow" data-weight="fill" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</div>
+<div class="w-0.5 h-16 border-l-2 border-dashed border-slate-200 mt-1"></div>
+</div>
+<div class="flex-1 bg-white p-5 rounded-2xl border-2 border-primary-container/30 shadow-[0_12px_24px_rgba(99,102,241,0.1)]">
+<div class="flex justify-between items-start mb-2">
+<h5 class="font-headline-md text-primary">Vector Algebra</h5>
+<span class="px-3 py-1 bg-primary/10 text-primary rounded-full font-label-sm">In Progress</span>
+</div>
+<p class="font-body-md text-on-surface-variant mb-4">Understanding magnitude and direction, addition of vectors, and scalar multiplication.</p>
+<div class="flex items-center gap-3">
+<div class="flex -space-x-2">
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Student avatar placeholder for collaborative learning module" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqOlwBuxV8rTaV836xd8MZPEmzAx1rjYpiC0o-Zr1VUUfxMZmlnXUhZ-OsJqoZwBhC6FTZtB7peA4lAjYnQFrFgCCup1pZPnr0JB_oxe8DDtWuT46po5uJfNML10n7qcdFNCQcco7IgvyqCuE6ZT9p7VwJuuxqfYp4gmel40uZhTpBOZGIZxbBDYuRdLOGdt2Ob5zY3tpPrNtV2q-I8mohEt5yHDgu1MbK9j6GMKnXnc4yLzru6aJ2ZwDs_SsX425zASifuaRvX3E"/>
+<img class="w-8 h-8 rounded-full border-2 border-white object-cover" data-alt="Student avatar placeholder for collaborative learning module" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQuyD3fm09Wtbf-YeVYjzt7BanxGc4dqdDlAEa8OhRzP38m77z8tb-xHodksQNNtxclTLu46QrzOJPK9G9WUmFfNwjZnElOthvLs1i6EFmFlocKadhkNsDclPEBBsNnGy1YyZYUyRsMS-fA9lf9SQC5l-5QRIvzYrzupcWhUugqhJrXg6pjMUPu86bQ7KwLy80eQLgR9mSPzlT8zZnUGA_Lz3NwOaPr5UfF4GQMAow_eybJ2ImpY5S_5lmdMM5riboRaJVdi3nt6Y"/>
+</div>
+<span class="text-xs text-on-surface-variant font-label-sm">144 students active now</span>
+</div>
+</div>
+</div>
+<!-- Upcoming Module -->
+<div class="flex items-start gap-6 opacity-60">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-slate-200 text-slate-500 flex items-center justify-center">
+<span class="material-symbols-outlined text-xl" data-icon="lock">lock</span>
+</div>
+</div>
+<div class="flex-1 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+<h5 class="font-headline-md text-on-surface-variant">Three Dimensional Geometry</h5>
+<p class="font-body-md text-slate-400">Prerequisite: Vector Algebra</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Subjects (Smaller Cards) -->
+<div class="md:col-span-4 space-y-gutter">
+<!-- Physics Card -->
+<div class="glass-card rounded-[32px] p-6 hover:shadow-[0_12px_24px_rgba(99,102,241,0.08)] transition-all cursor-pointer group">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-secondary-container/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl" data-icon="experiment">experiment</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-1">Physics</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Laws of Motion, Work Energy Power, and Thermodynamics.</p>
+<div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+<span class="font-label-sm text-on-surface-variant">12 Units</span>
+<div class="flex items-center gap-1">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-label-sm text-secondary">Live Class @ 4PM</span>
+</div>
+</div>
+</div>
+<!-- Chemistry Card -->
+<div class="glass-card rounded-[32px] p-6 hover:shadow-[0_12px_24px_rgba(99,102,241,0.08)] transition-all cursor-pointer group">
+<div class="flex items-center justify-between mb-4">
+<div class="w-12 h-12 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-3xl" data-icon="science">science</span>
+</div>
+<span class="material-symbols-outlined text-slate-300 group-hover:text-primary transition-colors" data-icon="arrow_forward">arrow_forward</span>
+</div>
+<h3 class="font-headline-md text-on-surface mb-1">Chemistry</h3>
+<p class="font-body-md text-on-surface-variant mb-4">Organic Chemistry, Redox Reactions, and Chemical Bonding.</p>
+<div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+<span class="font-label-sm text-on-surface-variant">14 Units</span>
+<span class="font-label-sm text-tertiary">80% Assignment Rank</span>
+</div>
+</div>
+<!-- AI Tutor Integration CTA -->
+<div class="bg-primary-container p-6 rounded-[32px] text-on-primary-container shadow-xl shadow-indigo-200 relative overflow-hidden group">
+<div class="absolute -right-8 -bottom-8 opacity-10 transition-transform group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-[120px]" data-icon="smart_toy">smart_toy</span>
+</div>
+<h4 class="font-headline-md mb-2 relative z-10">Stuck on a concept?</h4>
+<p class="font-body-md mb-6 relative z-10 opacity-90">Our AI Tutor is ready to explain any topic with interactive visualizations.</p>
+<button class="bg-white text-primary px-5 py-2.5 rounded-xl font-label-md shadow-lg relative z-10 active:scale-95 transition-transform">Ask Nova</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="fixed bottom-0 left-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border-t border-slate-200/50 dark:border-slate-800/50 rounded-t-3xl z-50 tonal-layer-elevation">
+<div class="max-w-xl mx-auto flex justify-around items-center px-4 pb-6 pt-3 h-20">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-['Lato'] text-[10px] font-medium mt-1">Dashboard</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-200 rounded-2xl px-6 py-2 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book" data-weight="fill" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+<span class="font-['Lato'] text-[10px] font-bold mt-1">Curriculum</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+<span class="font-['Lato'] text-[10px] font-medium mt-1">AI Tutor</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1.5 hover:text-indigo-500 transition-all active:scale-90 duration-300 ease-out" href="#">
+<span class="material-symbols-outlined" data-icon="quiz">quiz</span>
+<span class="font-['Lato'] text-[10px] font-medium mt-1">Tests</span>
+</a>
+</div>
+</nav>
+</body></html>

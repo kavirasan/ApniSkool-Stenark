@@ -6,6 +6,8 @@ import '../widgets/glass_card.dart';
 import '../widgets/gradient_progress_bar.dart';
 import '../widgets/supernova_app_bar.dart';
 import '../widgets/supernova_buttons.dart';
+import '../widgets/supernova_lottie.dart';
+import 'quiz_result_screen.dart';
 
 class QuizQuestion {
   const QuizQuestion({required this.prompt, required this.options, required this.answerIndex});
@@ -46,15 +48,37 @@ class QuizScreen extends StatefulWidget {
 }
 
 class _QuizScreenState extends State<QuizScreen> {
+  final DateTime _startedAt = DateTime.now();
   int _current = 0;
   int? _selected;
   bool _favorite = false;
   bool _showAiTip = true;
+  int _correctCount = 0;
 
   QuizQuestion get _q => _sampleQuestions[_current % _sampleQuestions.length];
 
   void _next() {
+    // Score the current answer before advancing or finishing.
+    final scoredCorrect =
+        _selected != null && _selected == _q.answerIndex;
+    final newCorrect = _correctCount + (scoredCorrect ? 1 : 0);
+
+    // After the last sample question, take the student to the result screen
+    // with their actual score and elapsed time.
+    if (_current >= _sampleQuestions.length - 1) {
+      Navigator.of(context).pushReplacement(
+        MaterialPageRoute(
+          builder: (_) => QuizResultScreen(
+            correct: newCorrect,
+            total: _sampleQuestions.length,
+            timeTaken: DateTime.now().difference(_startedAt),
+          ),
+        ),
+      );
+      return;
+    }
     setState(() {
+      _correctCount = newCorrect;
       _current += 1;
       _selected = null;
       _favorite = false;
@@ -383,14 +407,21 @@ class _AiTipCard extends StatelessWidget {
             Row(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
+                SizedBox(
                   width: 48,
                   height: 48,
-                  decoration: BoxDecoration(
-                    color: CosmicPulse.tertiary.withOpacity(0.1),
-                    borderRadius: CosmicPulse.brLg,
+                  child: SupernovaLottie.asset(
+                    SupernovaAnimations.aiOrb,
+                    size: 48,
+                    fallback: Container(
+                      decoration: BoxDecoration(
+                        color: CosmicPulse.tertiary.withOpacity(0.1),
+                        borderRadius: CosmicPulse.brLg,
+                      ),
+                      child: const Icon(Symbols.smart_toy,
+                          color: CosmicPulse.tertiary, fill: 1),
+                    ),
                   ),
-                  child: const Icon(Symbols.smart_toy, color: CosmicPulse.tertiary, fill: 1),
                 ),
                 const SizedBox(width: CosmicPulse.md),
                 Expanded(

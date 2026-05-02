@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'screens/home_shell.dart';
+import 'screens/splash_screen.dart';
 import 'theme/cosmic_pulse_theme.dart';
 
 void main() {
@@ -26,7 +26,7 @@ class ApniSkoolApp extends StatelessWidget {
       title: 'Kalvi Supernova',
       debugShowCheckedModeBanner: false,
       theme: buildCosmicPulseTheme(),
-      home: const HomeShell(),
+      home: const SplashScreen(),
     );
   }
 }

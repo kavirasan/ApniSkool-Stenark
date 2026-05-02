@@ -5,6 +5,7 @@ import '../theme/cosmic_pulse_theme.dart';
 import '../widgets/glass_card.dart';
 import '../widgets/progress_orb.dart';
 import '../widgets/supernova_app_bar.dart';
+import '../widgets/supernova_lottie.dart';
 
 class StreakHubScreen extends StatelessWidget {
   const StreakHubScreen({super.key});
@@ -96,8 +97,16 @@ class _StreakCalendarCard extends StatelessWidget {
               Text('DAILY STREAK', style: SupernovaText.labelMd(CosmicPulse.primary)),
               Row(
                 children: [
-                  const Icon(Symbols.local_fire_department,
-                      color: CosmicPulse.secondary, fill: 1, size: 20),
+                  SupernovaLottie.asset(
+                    SupernovaAnimations.streakFire,
+                    size: 28,
+                    fallback: const Icon(
+                      Symbols.local_fire_department,
+                      color: CosmicPulse.secondary,
+                      fill: 1,
+                      size: 22,
+                    ),
+                  ),
                   const SizedBox(width: 4),
                   Text('12 Days',
                       style: SupernovaText.labelMd(CosmicPulse.secondary).copyWith(fontSize: 15)),

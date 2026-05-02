@@ -5,6 +5,7 @@ import '../theme/cosmic_pulse_theme.dart';
 import '../widgets/glass_card.dart';
 import '../widgets/supernova_buttons.dart';
 import 'lesson_screen.dart';
+import 'subject_detail_screen.dart';
 
 class CurriculumScreen extends StatelessWidget {
   const CurriculumScreen({super.key});
@@ -58,26 +59,52 @@ class CurriculumScreen extends StatelessWidget {
           ),
         ),
         const SizedBox(height: CosmicPulse.gutter),
-        const _SubjectMiniCard(
+        _SubjectMiniCard(
           title: 'Physics',
           description: 'Laws of Motion, Work Energy Power, and Thermodynamics.',
           unitCount: '12 Units',
           iconColor: CosmicPulse.secondary,
-          iconBg: Color(0x1AB90538),
+          iconBg: const Color(0x1AB90538),
           icon: Symbols.experiment,
           tag: 'Live Class @ 4PM',
           tagColor: CosmicPulse.secondary,
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => const SubjectDetailScreen(
+                title: 'Physics',
+                tagline:
+                    'Laws of Motion, Work Energy Power, and Thermodynamics.',
+                icon: Symbols.experiment,
+                accent: CosmicPulse.secondary,
+                mastery: 0.62,
+                tag: 'LIVE @ 4PM',
+              ),
+            ),
+          ),
         ),
         const SizedBox(height: CosmicPulse.md),
-        const _SubjectMiniCard(
+        _SubjectMiniCard(
           title: 'Chemistry',
           description: 'Organic Chemistry, Redox Reactions, and Chemical Bonding.',
           unitCount: '14 Units',
           iconColor: CosmicPulse.tertiary,
-          iconBg: Color(0x1A006C49),
+          iconBg: const Color(0x1A006C49),
           icon: Symbols.science,
           tag: '80% Assignment Rank',
           tagColor: CosmicPulse.tertiary,
+          onTap: () => Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (_) => const SubjectDetailScreen(
+                title: 'Chemistry',
+                tagline:
+                    'Organic Chemistry, Redox Reactions, and Chemical Bonding.',
+                icon: Symbols.science,
+                accent: CosmicPulse.tertiary,
+                mastery: 0.74,
+                tag: '80% RANK',
+              ),
+            ),
+          ),
         ),
         const SizedBox(height: CosmicPulse.md),
         const _AskNovaCta(),
@@ -327,6 +354,7 @@ class _SubjectMiniCard extends StatelessWidget {
     required this.iconBg,
     required this.tag,
     required this.tagColor,
+    this.onTap,
   });
 
   final String title;
@@ -337,13 +365,17 @@ class _SubjectMiniCard extends StatelessWidget {
   final Color iconBg;
   final String tag;
   final Color tagColor;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
-    return GlassCard(
+    return InkWell(
+      onTap: onTap,
       borderRadius: CosmicPulse.brXxl,
-      padding: const EdgeInsets.all(CosmicPulse.lg),
-      child: Column(
+      child: GlassCard(
+        borderRadius: CosmicPulse.brXxl,
+        padding: const EdgeInsets.all(CosmicPulse.lg),
+        child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
@@ -379,6 +411,7 @@ class _SubjectMiniCard extends StatelessWidget {
             ],
           ),
         ],
+        ),
       ),
     );
   }

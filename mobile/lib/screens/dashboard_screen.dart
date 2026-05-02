@@ -5,6 +5,7 @@ import '../theme/cosmic_pulse_theme.dart';
 import '../widgets/glass_card.dart';
 import '../widgets/gradient_progress_bar.dart';
 import '../widgets/supernova_buttons.dart';
+import '../widgets/supernova_lottie.dart';
 import 'lesson_screen.dart';
 import 'quiz_screen.dart';
 import 'streak_hub_screen.dart';
@@ -211,18 +212,24 @@ class _StreakCard extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  Container(
+                  SizedBox(
                     width: 48,
                     height: 48,
-                    decoration: BoxDecoration(
-                      color: Colors.white.withOpacity(0.2),
-                      borderRadius: CosmicPulse.brLg,
-                    ),
-                    child: const Icon(
-                      Symbols.local_fire_department,
-                      color: Colors.white,
-                      fill: 1,
-                      size: 28,
+                    child: SupernovaLottie.asset(
+                      SupernovaAnimations.streakFire,
+                      size: 48,
+                      fallback: Container(
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.2),
+                          borderRadius: CosmicPulse.brLg,
+                        ),
+                        child: const Icon(
+                          Symbols.local_fire_department,
+                          color: Colors.white,
+                          fill: 1,
+                          size: 28,
+                        ),
+                      ),
                     ),
                   ),
                   const Spacer(),
@@ -375,7 +382,15 @@ class _AIQuizCard extends StatelessWidget {
             child: Stack(
               children: [
                 Center(
-                  child: Icon(Symbols.auto_awesome, size: 72, color: Colors.white.withOpacity(0.25)),
+                  child: SupernovaLottie.asset(
+                    SupernovaAnimations.aiOrb,
+                    size: 96,
+                    fallback: Icon(
+                      Symbols.auto_awesome,
+                      size: 72,
+                      color: Colors.white.withOpacity(0.25),
+                    ),
+                  ),
                 ),
                 Positioned(
                   left: CosmicPulse.md,
